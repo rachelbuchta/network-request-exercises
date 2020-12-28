@@ -4,7 +4,9 @@
 //       diet: 'grass, bugs',
 //       fun_fact: 'GAWGEOUS'
 //     }
-
+// seperate file with api calles being an object
+//import into here
+// get method, post, delete 
 fetch("http://localhost:3001/api/v1/animals", {
   method: "POST",
   headers: {
@@ -17,11 +19,16 @@ fetch("http://localhost:3001/api/v1/animals", {
         fun_fact: 'GAWGEOUS'
       })
 })
-  .then(response => response.json())
-  .then(json => showAnimals(animals))
+  .then(response => console.log(response))
+  .then(json => console.log(json))
   // .catch(err => console.log(err))
 
-showAnimals = animals => {
+
+  fetch("http://localhost:3001/api/v1/animals")
+  .then(response => response.json())
+  .then(animals => showAnimals(animals))
+
+  showAnimals = animals => {
 
   const animalsSection = document.querySelector(".animals")
 
