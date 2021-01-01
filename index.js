@@ -51,7 +51,7 @@ function getAnimalData() {
 
   function showAnimals(animals) {
   animals.map(animal => {
-  const animalElement = document.createElement("p")
+  const animalElement = document.createElement("article")
    animalElement.innerText = `
    ID: ${animal.id},
    Animal Name: ${animal.name},
