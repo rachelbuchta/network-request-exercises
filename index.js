@@ -2,9 +2,6 @@
   const nameInput = document.querySelector('.name-input')
   const dietInput = document.querySelector('.diet-input')
   const factInput = document.querySelector('.fact-input')
-  const animalName = document.querySelector('.animal-name')
-  const diet = document.querySelector('.diet')
-  const fact = document.querySelector('.fact')
   const submitButton = document.querySelector('#submit-button')
   const deleteButton = document.querySelector('#delete-button')
   const animalsSection = document.querySelector('.animals')
@@ -44,7 +41,7 @@ function postAnimal() {
 }
 
 function getAnimalData() {
-  fetch("http://localhost:3001/api/v1/animals")
+  return fetch("http://localhost:3001/api/v1/animals")
   .then(response => response.json())
   .then(animals => showAnimals(animals))
 }
@@ -53,8 +50,8 @@ function getAnimalData() {
   animals.map(animal => {
   const animalElement = document.createElement("article")
    animalElement.innerText = `
-   ID: ${animal.id},
-   Animal Name: ${animal.name},
+        ID: ${animal.id},
+        Animal Name: ${animal.name},
         Diet: ${animal.diet},
         Fun Fact: ${animal.fun_fact}`
      animalsSection.appendChild(animalElement)
