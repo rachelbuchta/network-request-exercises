@@ -1,0 +1,73 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  color: #172038;
+
+}
+
+body {
+  margin: auto;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1.5fr 5fr;
+  grid-template-areas: 
+  "animal-input animal-wrapper"
+  "animal-input animal-wrapper"
+}
+
+.form-wrapper,
+.delete-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-content: start;
+  padding: 1%;
+  text-align: center;
+  justify-items: center;
+}
+
+.animal-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #7dc046;
+  border:6px solid #2a4748;
+}
+
+.animal-wrapper {
+ 
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: 1fr;
+  border:6px solid #2a4748;
+  background: #286c43;
+
+}
+
+.animals {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: 25%;
+
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+} 
+
+article {
+  border: solid #172038;
+  text-align: center;
+  background: #b0c785;
+  padding: 2%;
+  margin: 2%; 
+  }
+
